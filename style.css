@@ -1,0 +1,47 @@
+:root {
+    --primary: red;
+    --secondary: green;
+}
+
+.myClass::first-line {
+    color:var(--primary);
+}
+
+.myClass::before {
+content: "This is my first website using CSS Selectors, Psuedo Classes & Elements.";
+}
+
+.cmb {
+    background-color: teal;
+    color: white;
+}
+
+a:visited {
+    color:grey;
+}
+
+/* same with this class */
+a:hover {
+    color:hotpink;
+}
+
+.square {
+    height: 4em;
+    width: 4em;
+    background-color: var(--secondary);
+    margin: auto;
+    top: 10em;
+    position: relative;
+    border-radius: 10px;
+}
+
+@keyframes mysquare {
+
+    0% {top:10em; box-shadow: 0 0 0 rgba(0,0,0,0);}
+    100% {top:9.5em; box-shadow: 0 10px 10px rgba(0,0,0,0.3);}
+}
+
+.square:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 3);
+    animation: 0.2s mysquare forwards;
+}
